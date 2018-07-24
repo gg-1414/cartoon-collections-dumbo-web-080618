@@ -14,5 +14,9 @@ end
 
 def find_the_cheese(list_of_ingredients)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  list_of_ingredients.find {|ingredient| ingredient == }
+  list_of_ingredients.find do |ingredient| 
+    cheese_types.any? do |cheese|
+      cheese == ingredient 
+    end 
+  end 
 end
